@@ -1,5 +1,6 @@
 .DS_Store
 config/database.yml
+config/database.yml.template
 config/deploy.rb
 config/settings.yml
 config/newrelic.yml
