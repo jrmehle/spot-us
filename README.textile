@@ -1,4 +1,4 @@
-h1. Spot.Us
+h1. CSJNorthfield (Powered by Spot.Us)
 
 h2. Community Funded Reporting
 
