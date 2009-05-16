@@ -2,6 +2,8 @@ class CommentsController < ApplicationController
   skip_before_filter :verify_authenticity_token
   before_filter :login_required
 
+  bounce_bots :send_bots, :comment, :blog_url
+
   resources_controller_for :comments, :only => [:create, :index]
 
   response_for :create do |format|
@@ -23,6 +25,11 @@ class CommentsController < ApplicationController
   end
 
   protected
+
+  def send_bots
+    redirect_to root_path
+  end
+
   def can_create?
     if current_user.nil?
       store_comment_for_non_logged_in_user
