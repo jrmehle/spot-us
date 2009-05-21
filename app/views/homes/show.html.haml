@@ -1,10 +1,10 @@
-- @title = "Spot.us - Home"
+- @title = "Community Supported Journalism, Northfield - Home"
 .block-spacer
 .home-boxer
   %div.home-floater.home-image-box{:style=>"width:425px;float:left;background: #fff;"}
     .home-floater
       %h3{:style => "color: red;"}
-        %strong Spot.Us' Video Spot
+        %strong CSJ Northfield - Current Update
       .double_content_border
       = site_option_content_for(:video_content)
       = change_site_option(:video_content)
@@ -16,7 +16,7 @@
     - else
       #pitches_carousel
         %h3.float-left{:style => "color: red;"} 
-          %strong Help Fund this Story
+          %strong Help fund this!
         .float-right
           %span= link_to "View more Pitches &raquo;", news_items_path
         .double_content_border.clear
@@ -27,7 +27,7 @@
           %a.prev.arrow.float-left Prev
           %a.next.arrow.float-right Next
       %h5.quiet{:style=>"margin:0;"}
-        If you want to see this story researched, written, and published,
+        If you want to see this published,
         click donate to help fund it!  
 .clear
 - # spotus_ie_pixel.gif is an IE fix
