@@ -6,12 +6,6 @@
 
 #equalize
   .box_white
-    .span-4.colborder
-      = link_to 'All Networks', news_items_path(:subdomain => false)
-      %br/
-      - @networks.each do |network|
-        = link_to network.display_name, news_items_path(:subdomain => network.name)
-        %br/
     - form_tag(:search_news_items, :method => :get) do
       .span-3
         %h4 Search
