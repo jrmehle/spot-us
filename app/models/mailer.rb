@@ -31,7 +31,7 @@ class Mailer < ActionMailer::Base
   end
 
   def news_org_signup_request(user)
-    recipients '"David Cohn" <david@spot.us>'
+    recipients '"David Cohn" <csjnorthfield@gmail.com>'
     from       MAIL_FROM_INFO
     subject    "Spot.Us: News Org Requesting to Join"
     body        :user => user
@@ -45,7 +45,7 @@ class Mailer < ActionMailer::Base
   end
 
   def pitch_created_notification(pitch)
-    recipients '"David Cohn" <david@spot.us>'
+    recipients '"David Cohn" <csjnorthfield@gmail.com>'
     from       MAIL_FROM_INFO
     subject    "Spot.Us: A pitch needs approval!"
     body       :pitch => pitch
@@ -59,7 +59,7 @@ class Mailer < ActionMailer::Base
   end
 
   def pitch_accepted_notification(pitch)
-    recipients '"David Cohn" <david@spot.us>'
+    recipients '"David Cohn" <csjnorthfield@gmail.com>'
     bcc pitch.supporters.map(&:email).concat(Admin.all.map(&:email)).join(', ')
     from       MAIL_FROM_INFO
     subject    "Spot.Us: Success!! Your Story is Funded!"
@@ -67,7 +67,7 @@ class Mailer < ActionMailer::Base
   end
 
   def admin_reporting_team_notification(pitch)
-    recipients '"David Cohn" <david@spot.us>'
+    recipients '"David Cohn" <csjnorthfield@gmail.com>'
     from       MAIL_FROM_INFO
     subject    "Spot.Us: Someone wants to join a pitch's reporting team!"
     body       :pitch => pitch
@@ -95,7 +95,7 @@ class Mailer < ActionMailer::Base
   end
 
   def story_ready_notification(story)
-    recipients '"David Cohn" <david@spot.us>'
+    recipients '"David Cohn" <csjnorthfield@gmail.com>'
     from       MAIL_FROM_INFO
     subject    "Spot.Us: Story ready for publishing"
     body       :story => story
