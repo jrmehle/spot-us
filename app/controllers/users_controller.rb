@@ -14,7 +14,7 @@ class UsersController < ApplicationController
         self.current_user = @user
         create_current_login_cookie
         update_balance_cookie
-        flash_and_redirect(:success, 'Welcome to Spot.Us!', root_path)
+        flash_and_redirect(:success, 'Welcome to CSJ Northfield!', root_path)
       else
         flash_and_redirect(:success, "Your account will be reviewed prior to approval. We'll get back to you as soon as possible.", root_path)
       end
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
       login_cookies
       handle_first_donation_for_non_logged_in_user
       handle_first_pledge_for_non_logged_in_user
-      flash[:success] = "You have successfully activated your account - welcome to Spot.Us!"
+      flash[:success] = "You have successfully activated your account - welcome to CSJ Northfield!"
       redirect_back_or_default('/')
     else
       flash[:error] = "Sorry, we were unable to find that activation code. Perhaps you have already activated your account?"

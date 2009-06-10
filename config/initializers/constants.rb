@@ -7,4 +7,4 @@ LOCATIONS = [
   "South Bay"
 ].freeze
 
-MAIL_FROM_INFO = %("Spot.Us" <csjnorthfield@gmail.com>)
+MAIL_FROM_INFO = %("CSJ Northfield" <csjnorthfield@gmail.com>)

@@ -25,7 +25,7 @@
         .clear
     .donation
       .float-left
-        %strong Support Spot.Us
+        %strong Support CSJ Northfield
       .float-right
         = number_to_currency(@purchase.spotus_donation[:amount] || 0)
       .clear
@@ -71,7 +71,7 @@
               = hidden_field_tag "amount_#{i}", donation.amount
               - i += 1
             = hidden_field_tag "item_number_#{i}", "#{@purchase.spotus_donation.id}"
-            = hidden_field_tag "item_name_#{i}", "Support Spot.Us"
+            = hidden_field_tag "item_name_#{i}", "Support CSJ Northfield"
             = hidden_field_tag "amount_#{i}", @purchase.spotus_donation[:amount]
             = image_submit_tag "buy_now.gif"
         .clear
