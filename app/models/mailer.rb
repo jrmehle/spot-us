@@ -26,35 +26,35 @@ class Mailer < ActionMailer::Base
   def organization_signup_notification(user)
     recipients user.email
     from       MAIL_FROM_INFO
-    subject    "Spot.Us: Important Information on Joining"
+    subject    "CSJ Northfield: Important Information on Joining"
     body :user => user
   end
 
   def news_org_signup_request(user)
     recipients '"David Cohn" <csjnorthfield@gmail.com>'
     from       MAIL_FROM_INFO
-    subject    "Spot.Us: News Org Requesting to Join"
+    subject    "CSJ Northfield: News Org Requesting to Join"
     body        :user => user
   end
 
   def password_reset_notification(user)
     recipients user.email
     from       MAIL_FROM_INFO
-    subject    "Spot.Us: Password Reset"
+    subject    "CSJ Northfield: Password Reset"
     body       :user => user
   end
 
   def pitch_created_notification(pitch)
     recipients '"David Cohn" <csjnorthfield@gmail.com>'
     from       MAIL_FROM_INFO
-    subject    "Spot.Us: A pitch needs approval!"
+    subject    "CSJ Northfield: A pitch needs approval!"
     body       :pitch => pitch
   end
 
   def pitch_approved_notification(pitch)
     recipients pitch.user.email
     from       MAIL_FROM_INFO
-    subject    "Spot.Us: Your pitch has been approved!"
+    subject    "CSJ Northfield: Your pitch has been approved!"
     body       :pitch => pitch
   end
 
@@ -62,56 +62,56 @@ class Mailer < ActionMailer::Base
     recipients '"David Cohn" <csjnorthfield@gmail.com>'
     bcc pitch.supporters.map(&:email).concat(Admin.all.map(&:email)).join(', ')
     from       MAIL_FROM_INFO
-    subject    "Spot.Us: Success!! Your Story is Funded!"
+    subject    "CSJ Northfield: Success!! Your Story is Funded!"
     body       :pitch => pitch
   end
 
   def admin_reporting_team_notification(pitch)
     recipients '"David Cohn" <csjnorthfield@gmail.com>'
     from       MAIL_FROM_INFO
-    subject    "Spot.Us: Someone wants to join a pitch's reporting team!"
+    subject    "CSJ Northfield: Someone wants to join a pitch's reporting team!"
     body       :pitch => pitch
   end
 
   def reporter_reporting_team_notification(pitch)
     recipients pitch.user.email
     from       MAIL_FROM_INFO
-    subject    "Spot.Us: Someone wants to join your reporting team!"
+    subject    "CSJ Northfield: Someone wants to join your reporting team!"
     body       :pitch => pitch
   end
 
   def approved_reporting_team_notification(pitch, user)
     recipients user.email
     from       MAIL_FROM_INFO
-    subject    "Spot.Us: Welcome to the reporting team!"
+    subject    "CSJ Northfield: Welcome to the reporting team!"
     body       :pitch => pitch
   end
 
   def applied_reporting_team_notification(pitch, user)
     recipients user.email
     from       MAIL_FROM_INFO
-    subject    "Spot.Us: We received your application!"
+    subject    "CSJ Northfield: We received your application!"
     body       :pitch => pitch
   end
 
   def story_ready_notification(story)
     recipients '"David Cohn" <csjnorthfield@gmail.com>'
     from       MAIL_FROM_INFO
-    subject    "Spot.Us: Story ready for publishing"
+    subject    "CSJ Northfield: Story ready for publishing"
     body       :story => story
   end
 
   def organization_approved_notification(user)
     recipients user.email
     from       MAIL_FROM_INFO
-    subject    "Spot.Us: Important Information on Joining"
+    subject    "CSJ Northfield: Important Information on Joining"
     body       :user => user
   end
 
   def user_thank_you_for_donating(donation)
     recipients  donation.user.email
     from        MAIL_FROM_INFO
-    subject     "Spot.Us: Thank You for Donating!"
+    subject     "CSJ Northfield: Thank You for Donating!"
     body        :donation => donation
   end
 end
