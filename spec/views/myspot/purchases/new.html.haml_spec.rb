@@ -33,7 +33,7 @@ describe 'purchases/new' do
         template.should have_tag("input[type='hidden'][value=?]", "#{donation.amount}")
       end
     end
-    it "includes the Spot.Us donation" do
+    it "includes the CSJ Northfield donation" do
       do_render
       template.should have_tag("input[name='item_name_#{@donations.size + 1}'][value=?]", "Support Spot.Us")
       template.should have_tag("input[name='amount_#{@donations.size + 1}'][value=?]", @spotus_donation.amount)

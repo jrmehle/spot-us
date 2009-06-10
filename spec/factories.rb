@@ -3,7 +3,7 @@ Factory.sequence(:topic_name) { |n| "Topic #{n}" }
 Factory.define :credential do |credential|
   credential.add_attribute(:type, 'Job')
   credential.title "Credential"
-  credential.url "http://spot.us/"
+  credential.url "http://csjnorthfield.org/"
   credential.description "Description"
   credential.association(:user)
 end
@@ -11,7 +11,7 @@ end
 Factory.define :job do |job|
   job.add_attribute(:type, 'Job')
   job.title "Job"
-  job.url "http://spot.us/"
+  job.url "http://csjnorthfield.org/"
   job.description "Job Description"
   job.association(:user)
 end
