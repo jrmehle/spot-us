@@ -87,11 +87,11 @@ class PitchesController < ApplicationController
       if pitch.user == current_user
         if pitch.donated_to?
           access_denied( \
-            :flash => "You cannot edit a pitch that has donations.  For minor changes, contact info@spot.us",
+            :flash => "You cannot edit a pitch that has donations.  For minor changes, contact csjnorthfield@gmail.com",
             :redirect => pitch_url(pitch))
         else
           access_denied( \
-            :flash => "You cannot edit this pitch.  For minor changes, contact info@spot.us",
+            :flash => "You cannot edit this pitch.  For minor changes, contact csjnorthfield@gmail.com",
             :redirect => pitch_url(pitch))
         end
       else

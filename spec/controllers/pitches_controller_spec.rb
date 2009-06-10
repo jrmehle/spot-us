@@ -46,7 +46,7 @@ describe PitchesController do
       donation = Factory(:donation, :pitch => pitch, :amount => 2, :status => 'paid')
       Pitch.stub!(:find).and_return(pitch)
       get :edit, :id => pitch.id
-      flash[:error].should match(/You cannot edit a pitch that has donations.  For minor changes, contact info@spot.us/)
+      flash[:error].should match(/You cannot edit a pitch that has donations.  For minor changes, contact csjnorthfield@gmail.com/)
       response.should redirect_to(pitch_path(pitch))
     end
   end
