@@ -12,7 +12,7 @@ class Mailer < ActionMailer::Base
   def citizen_signup_notification(user)
     recipients user.email
     from       MAIL_FROM_INFO
-    subject    %(Welcome to CSJ Northfield – "Community Funded Reporting")
+    subject    %(Welcome to CSJ Northfield – "Community Supported Journalism")
     body :user => user
   end
 
