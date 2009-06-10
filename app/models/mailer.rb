@@ -5,21 +5,21 @@ class Mailer < ActionMailer::Base
   def activation_email(user)
     recipients user.email
     from       MAIL_FROM_INFO
-    subject    %(Welcome to Spot.Us – Please verify your email address")
+    subject    %(Welcome to CSJ Northfield – Please verify your email address")
     body :user => user
   end
 
   def citizen_signup_notification(user)
     recipients user.email
     from       MAIL_FROM_INFO
-    subject    %(Welcome to Spot.Us – "Community Funded Reporting")
+    subject    %(Welcome to CSJ Northfield – "Community Funded Reporting")
     body :user => user
   end
 
   def reporter_signup_notification(user)
     recipients user.email
     from       MAIL_FROM_INFO
-    subject    "Welcome to Spot.Us – Reporting on Communities"
+    subject    "Welcome to CSJ Northfield – Reporting on Communities"
     body :user => user
   end
 
